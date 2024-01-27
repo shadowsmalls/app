@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login</title>
+	<style>
+body {
+       margin: 0;
+}
+
+     .fundo-img {
+		background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('img2.jpg');
+	width: 100vh;
+	height: 100vh;
+	position: fixed;
+	filter: blur(7px);
+	 }
+ 
+        
+		.sobredicas{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	    .dicashome{
+            padding: 5px;
+            margin: 10px;
+            width: 400px;
+            height: 100px;
+            background-color: #ffffff10;
+			border: 3px solid #ffffff50;
+			backdrop-filter: blur(10px);
+			            border-radius: 20px;
+        }
+        .dicas{
+            font-size: 15px;
+            font-family: Verdana;
+            color: black;
+        }
+        #btn-estrela,#btn-partilha{
+        	color: whitesmoke;
+            background-color: transparent;
+            border: none;
+
+        }
+      #hr-reacao{
+      	width: 50px;
+      	background-color:#0b4b54 ;
+      }
+	  @keyframes coracaoBatendo{
+		0%{}
+		50%{transform: scale(1.5);}
+		100%{}
+
+	  }
+		#icone-central{
+			font-size: 30px;
+            color: whitesmoke;
+			animation: coracaoBatendo linear infinite;
+			animation-delay: 0s;
+			animation-duration: 1s;
+		}
+		#icone-estrela,#icone-partilha{
+			font-size: 25px;
+			color: palevioletred;
+		}
+		#icone-perfil,#icone-def{
+			font-size: 25px;
+			color: whitesmoke;
+		}
+		.btn-perfil,.btn-dif{	
+            background-color: palevioletred;
+			border: solid #ffffff;
+			border-style: double;
+			box-shadow: 0 0 10px  black;
+			width: 50px;
+			height: 50px;
+			border-radius: 40%;
+			margin-left: 50px;
+			margin-right: 50px;
+		}
+		#spn{
+			color: transparent;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+		
+		}
+		button{
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+            border: 5px double whitesmoke;            
+			margin: px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		    background-color: palevioletred;
+
+		}
+
+		footer{
+			position: fixed;
+			background-color: #ffffff10;
+			border-top: 2px solid #ffffff60;
+			backdrop-filter: blur(10px);
+			width: 100%;
+			height: 70px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			bottom: 0%;
+		}
+	</style>
+</head>
+
+<body id="body">
+<div class="fundo-img"></div>
+<div class='sobredicas'>
+<div class="dicashome"><p class="dicas">1️⃣ Hidrate-se: A exposição ao sol e à água salgada podem desidratar o nosso corpo. Portanto, beba bastante água e sucos naturais para repor os líquidos perdidos.</p></div>
+   <div class="reacao">
+   	<button id="btn-estrela" onclick="estrela()"><ion-icon name="star" id="icone-estrela"></ion-icon></button>
+   	<hr id="hr-reacao">
+   	<button id="btn-partilha" onclick="partilha()"><ion-icon name="share-social-outline" id="icone-partilha"></ion-icon></button>
+   </div>
+</div>
+
+																																																																																																																																																																																																																																																																																																																																																																																																																																														
+
+
+</body>
+
+<footer id="foot">
+	<button class="btn-perfil" onclick="perfil()"><ion-icon name="person-outline" id="icone-perfil" ></ion-icon></button>
+
+    <button id="btn-principal" onclick="principal()"><ion-icon name="fitness-outline"id="icone-central"></ion-icon></button>
+
+	<button class="btn-dif" onclick="def()"><ion-icon name="settings-outline" id="icone-def"></ion-icon></button>
+</footer>
+
+<script>
+	function principal() {
+      const codeprincipal = document.getElementById('icone-central');
+		codeprincipal.style.color = 'whitesmoke'
+		codeprincipal.style.transition = '0.5s'
+	  const fundoBtnPri = document.getElementById('btn-principal') 
+	    fundoBtnPri.style.background = 'deeppink'
+		fundoBtnPri.style.transition = '0.5s'
+		
+	}
+ function perfil(){
+	//window.location.replace("file:///C:/Users/Etiandro%20VD/Documents/TecCare/MeExamine/perfil-MeExamine.html")
+	const codeperfil = document.getElementById('icone-perfil');
+		codeperfil.style.color = 'whitesmoke'
+		codeperfil.style.transition = '0.5s'
+		codeperfil.style.transform = 'rotatey(180deg)'
+	const codeperfiltxt = document.getElementById('spn');
+		codeperfiltxt.style.color = 'whitesmoke'
+
+		
+	}
+	function def() {
+      const codedef = document.getElementById('icone-def');
+	codedef.style.color = 'whitesmoke'
+		codedef.style.transition = '0.5s'
+		codedef.style.transform = 'rotate(180deg)'
+		
+	}
+	
+	function estrela() {
+      const codeestrela = document.getElementById('icone-estrela');
+		codeestrela.style.color = 'yellow'
+		codeestrela.style.transition = '0.5s'
+		codeestrela.style.transform = 'rotatey(180deg)'
+	}
+
+	function partilha() {
+      const codepartilha = document.getElementById('icone-partilha');
+		codepartilha.style.color = 'whitesmoke'
+		codepartilha.style.transition = '0.5s'
+		codepartilha.style.transform = 'rotatey(360deg)'
+	}
+
+
+	
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>
